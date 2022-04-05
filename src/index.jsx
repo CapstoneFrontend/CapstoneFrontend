@@ -34,7 +34,6 @@ class App extends React.Component {
     getReviews(reviewsPage, reviewsCount, reviewsSort, productId).then((res) => {
       let { data } = res;
       data = data.results;
-      // console.log(data);
       this.setState({ reviews: data, isLoading: false });
     });
     getReviews(reviewsPage + 1, reviewsCount, reviewsSort, productId).then((res) => {
@@ -67,7 +66,6 @@ class App extends React.Component {
     getReviews(reviewsPage + 1, reviewsCount, reviewsSort, productId).then((res) => {
       let { data } = res;
       data = data.results;
-      // console.log('data', data, 'next', reviewsNextPage);
       this.setState({ reviews, reviewsNextPage: data, reviewsPage });
     });
   };
@@ -83,12 +81,12 @@ class App extends React.Component {
       <div>
         <RelatedList />
         <CompareList />
-        <RatingReviews
+        {/* <RatingReviews
           reviewsNextPage={reviewsNextPage}
           helpOnClick={this.helpOnClick}
           data={reviews}
           moreReviewsOnClick={this.moreReviewsOnClick}
-        />
+        /> */}
       </div>
     );
   }

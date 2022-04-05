@@ -10,7 +10,7 @@ const compareList = () => (
     <div className="slider-container">
       <MdKeyboardArrowLeft size={40} className="arrow-button-left" />
       <div className="slider">
-        {slides.map((slide) => <div className="slider-cards">{slide}</div>)}
+        {slides.map((slide) => <div className="slider-cards" key={slide.toString()}>{slide}</div>)}
       </div>
       <MdKeyboardArrowRight size={40} className="arrow-button-right" />
     </div>
