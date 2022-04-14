@@ -726,6 +726,7 @@ class App extends React.Component {
       });
   };
 
+  // Relate Compare Outfit Lists - get selected product ratings
   getSelectedProductRatings = () => {
     const {
       productID,
